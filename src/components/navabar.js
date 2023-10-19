@@ -12,19 +12,19 @@ const Navbar = () =>{
     const catgories = ["fiction","nonfiction","history"]
     const router =useRouter();
     return(
-        <div className="h-24 w-full  opacity-700 bg-white-100  flex flex-wrap flex-col justify-center items-center">
-                <div className="h-full w-[20%]  flex flex-wap justify-center items-center">
+        <div className="border border-black h-24 w-full opacity-700 bg-white-100  grid grid-cols-6">
+                <div className="border border-black h-full w-full  flex flex-wap justify-center items-center">
                     {/* <Image src={Logo} width='auto' height='auto' alt="image"   priority={true}  /> */}
                 </div>
-                <div className="h-full w-[10%]  flex flex-wap justify-center items-center">
+                <div className="border border-green-500 h-full w-full  flex flex-wap justify-center items-center">
                     <Link href="/" className="text-black text-xl hover:text-sky-500 md:italic">Home</Link>
                 </div>
-                <div className="h-full w-[10%] dropdown dropdown-bottom 
-                    pt-9 pl-7">
+                <div className="border border-pink-500 h-full w-full dropdown dropdown-bottom 
+                   flex flex-wrap flex-col items-center justify-center">
                    <button className="md:text-xl md:text-black italic md:hover:text-sky-500" onClick={()=>setopen(!open)}>Categories</button>
                   {
                    
-                    open &&( <div className="pr-20 "><ul className="w-[600%] rounded-md h-[600%] bg-gray-100  flex flex-wrap flex-col gap-2 justify-center items-center relative z-100 ">
+                    open && ( <div className=" absolute top-[13%]"><ul className="w-[150%] rounded-md h-[150%] bg-gray-100  flex flex-wrap flex-col gap-2 justify-center items-center z-100 ">
                         {
                             catgories.map((e,index)=>(
                                 <li key={index}><Link href={`/${e}`} className="md:text-xl md:italic" onClick={()=>setopen(!open)}>{e}</Link> </li>
@@ -35,16 +35,16 @@ const Navbar = () =>{
 
                   } 
                 </div>
-                <div className="h-full w-[30%]  flex flex-wrap flex-col justify-center items-center">
+                <div className="h-full w-full  flex flex-wrap flex-col justify-center items-center">
 
                     <input type="search" className="h-[30%] w-[90%] rounded-xl p-3 border border-solid border-black" placeholder=" search" />
 
                 </div>
-                <button  className="h-full w-[13%] flex flex-wrap flex-col justify-center items-center"
+                <button  className="border border-sky-100 h-full w-full flex flex-wrap flex-col justify-center items-center"
                     onClick={()=>router.push('/cart')}>
                 <AiOutlineShoppingCart className="h-[60%] w-[48%]"/>
                 </button>
-                <div className="h-full w-[12%]  flex flex-wrap flex-col justify-center items-center">
+                <div className=" border border-green-500 h-full w-full flex flex-wrap flex-col justify-center items-center">
                     <button className="h-[48%] w-24 text-black border border-black rounded-md"
                     onClick={()=>router.push('/login')}>Signin</button>
                 </div>

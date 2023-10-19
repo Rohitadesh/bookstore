@@ -32,10 +32,10 @@ const Fiction= () =>{
                 book.results?.books.map((element,index)=>{
                     {/* console.log(element.amazon_product_url) */}
                     return(
-                        <div key={index} className="border border-black h-full w-full
+                        <div key={index} className="border border-black h-[15rem] w-[100%]
                         flex flex-col flex-wrap justify-center items-center rounded-2xl gap-4">
-                            <h1 className="text-md text-black text-center ">{element.title}</h1>
-                            <h1 className="text-md text-black ">{element.author}</h1>
+                            <h1 className=" pl-4 h-[50px] w-full truncate text-sm text-black text-center ">{element.title}</h1>
+                            <h1 className="pl-9 h-[50px] w-full truncate text-sm text-black ">{element.author}</h1>
                             <button className="w-12 border shadow-xl rounded-md"
                             onClick={()=>{
                                 router.push(

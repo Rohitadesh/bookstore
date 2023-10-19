@@ -25,14 +25,14 @@ const History = () =>{
         ">
             <h1 className="text-2xl italic">e-book-ficiton </h1>
         </div>
-        <div className="h-[120%] w-[90%] border border-red-100 grid grid-row-3 grid-cols-5 flex gap-4">
+        <div className="h-[120%] w-[90%]  grid grid-row-3 grid-cols-5 flex gap-4 p-5">
         {
             history_book.results?.books.map((element,index)=>{
                 return(
-                    <div key={index} className="border border-black h-full w-full
+                    <div key={index} className="border border-black h-[15rem] w-[100%] 
                             flex flex-col flex-wrap justify-center items-center rounded-2xl gap-4">
-                            <h1 className="text-md text-black text-center ">{element.title}</h1>
-                            <h1 className="text-md text-black text-center ">{element.author}</h1>
+                            <h1 className="h-[50px] w-full  text-md text-black truncate text-center ">{element.title}</h1>
+                            <h1 className="h-[50px] text-md text-black truncate text-center ">{element.author}</h1>
                             <button className="w-12 border shadow-xl rounded-md"
                             onClick={()=>{
                                 router.push(
